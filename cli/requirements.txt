@@ -1,9 +1,10 @@
 click>=6.7
 tqdm
 pdfminer
-pdf2image
+pdf2image==1.14.0
 pandas 
 tabulate
+sklearn
 
 # S3 access
 boto3

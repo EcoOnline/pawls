@@ -17,6 +17,27 @@ Please follow the [instructions here](https://github.com/Belval/pdf2image#window
 3. (Optional) Install Tesseract, the OCR software, which is used to perform OCR on scanned documents.
 Please follow the [instructions here](https://tesseract-ocr.github.io/tessdoc/Installation.html).
 
+#### Installation with pyenv
+
+If you are using `pyenv` for managing virtual environments, you can do as follows:
+
+1. Create and activate a new virtual environment (say you want to use python 3.8.12):
+
+    ```bash
+    pyenv virtualenv 3.8.12 pawls
+    pyenv local pawls
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    cd pawls/cli
+    pip install -r requirements.txt
+    python setup.py install
+    ````
+
+3. Do the two optional steps from previous installation instructions if desired. 
+
 ### Usage
 
 1. Place or download PDFs into `skiff_files/apps/pawls/papers` as described below. If you work at AI2, see the internal usage script for doing this [here](../../scripts/ai2-internal). 
