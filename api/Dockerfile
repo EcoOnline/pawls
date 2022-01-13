@@ -26,8 +26,8 @@ RUN ./autogen.sh && ./configure && make && make install
 WORKDIR /skiff_files/apps/pawls/s3-annotations
 
 ## Set Your AWS Access credentials
-ENV AWS_ACCESS_KEY=AKIAY6YATKZBVNURC6QY
-ENV AWS_SECRET_ACCESS_KEY=6VV4bCo3yCDSgNh2DR+UVkWtpMe90/tTYNWQkSdY
+ENV AWS_ACCESS_KEY=<key_id>
+ENV AWS_SECRET_ACCESS_KEY=<access_key>
 
 ## Set the directory where you want to mount your s3 bucket
 ENV S3_MOUNT_DIRECTORY=/skiff_files/apps/pawls/s3-annotations
