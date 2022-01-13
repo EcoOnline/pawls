@@ -9,16 +9,20 @@ services:
     api:
         build:
           context: ./api
+        devices:
+            - /dev/fuse:/dev/fuse:rwm
+        cap_add:
+            - SYS_ADMIN
         volumes:
             - ./api:/usr/local/src/skiff/app/api
-            - ./skiff_files/apps/pawls:/skiff_files/apps/pawls
+            #- ./skiff_files/apps/pawls/papers:/skiff_files/apps/pawls/s3-annotations
             - ./api/config/allowed_users_local_development.txt:/users/allowed.txt
         environment:
             # This ensures that errors are printed as they occur, which
             # makes debugging easier.
             - PYTHONUNBUFFERED=1
             - LOG_LEVEL=DEBUG
-        command: ["main:app", "--host", "0.0.0.0", "--reload"]
+        # command: ["main:app", "--host", "0.0.0.0", "--reload"]
     ui:
         build:
           context: ./ui
