@@ -22,22 +22,24 @@ RUN git clone https://github.com/s3fs-fuse/s3fs-fuse/ /usr/src/s3fs-fuse
 WORKDIR /usr/src/s3fs-fuse 
 RUN ./autogen.sh && ./configure && make && make install
 
+## Set the directory where you want to mount your s3 bucket
+ENV LOCAL_MOUNT_DIRECTORY=/skiff_files/apps/pawls/annotations
 ## Create annotations folder
-WORKDIR /skiff_files/apps/pawls/s3-annotations
+WORKDIR ${LOCAL_MOUNT_DIRECTORY}
 
 ## Set Your AWS Access credentials
-ENV AWS_ACCESS_KEY=<key_id>
-ENV AWS_SECRET_ACCESS_KEY=<access_key>
-
-## Set the directory where you want to mount your s3 bucket
-ENV S3_MOUNT_DIRECTORY=/skiff_files/apps/pawls/s3-annotations
+#ENV AWS_ACCESS_KEY=
+#ENV AWS_SECRET_ACCESS_KEY=
+ENV AWS_REGION=eu-west-1
+ENV AWS_IAM_ROLE=eco-ml-dev-ec2
 
 ## Replace with your s3 bucket name
 ENV S3_BUCKET_NAME=eco-ml-annotations
+ENV S3_ANNOTATION_DIRECTORY=session-1_01-20
 
 ## S3fs-fuse credential config
-RUN echo $AWS_ACCESS_KEY:$AWS_SECRET_ACCESS_KEY > /root/.passwd-s3fs && \
-    chmod 600 /root/.passwd-s3fs
+#RUN echo $AWS_ACCESS_KEY:$AWS_SECRET_ACCESS_KEY > /root/.passwd-s3fs && \
+#    chmod 600 /root/.passwd-s3fs
 
 # Setup a spot for the api code
 WORKDIR /usr/local/src/skiff/app/api

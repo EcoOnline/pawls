@@ -90,12 +90,16 @@ def all_pdf_shas() -> List[str]:
 
 def update_status_json(status_path: str, sha: str, data: Dict[str, Any]):
 
-    with open(status_path, "r+") as st:
+    status_json = None
+    with open(status_path, "r") as st:
         status_json = json.load(st)
-        status_json[sha] = {**status_json[sha], **data}
-        st.seek(0)
+    
+    status_json[sha] = {**status_json[sha], **data}
+        
+    # Writing separately was required when mounting the annotation path with FUSE.
+    # Otherwise file truncation did not work as expected.
+    with open(status_path, "w") as st:
         json.dump(status_json, st)
-        st.truncate()
 
 
 @app.get("/", status_code=204)

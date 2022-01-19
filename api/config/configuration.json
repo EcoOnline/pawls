@@ -1,5 +1,5 @@
 {
-    "output_directory": "/skiff_files/apps/pawls/s3-annotations/",
+    "output_directory": "/skiff_files/apps/pawls/annotations/",
     "labels": [
         {
             "text": "Key",
