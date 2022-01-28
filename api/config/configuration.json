@@ -2,15 +2,126 @@
     "output_directory": "/skiff_files/apps/pawls/annotations/",
     "labels": [
         {
-            "text": "Key",
-            "color": "#70DDBA"
+            "text": "1_1_ProductName-2",
+            "color": "#6D2806"
         },
         {
-            "text": "Value",
-            "color": "#FFDDBA"
+            "text": "1_1_Synonyms-6",
+            "color": "#7D045F"
+        },
+        {
+            "text": "1_1_Article-7",
+            "color": "#6DAD82"
+        },
+        {
+            "text": "1_1_REACHNo-563",
+            "color": "#E31424"
+        },
+        {
+            "text": "1_1_REACHComments-1653",
+            "color": "#7BCE55"
+        },
+        {
+            "text": "1_1_CAS-10",
+            "color": "#B1EDA5"
+        },
+        {
+            "text": "1_2_UseOfSubstance-5",
+            "color": "#77B888"
+        },
+        {
+            "text": "1_2_UsesAdvisedAgainst-844",
+            "color": "#BD1F8F"
+        },
+        {
+            "text": "2_1_CLPClassificationComments-1413",
+            "color": "#8B1607"
+        },
+        {
+            "text": "2_2_HazardStatements-609",
+            "color": "#1C32F1"
+        },
+        {
+            "text": "2_2_PrecautionaryStatements-610",
+            "color": "#AEE470"
+        },
+        {
+            "text": "2_2_SupplementalLabelInfo-1355",
+            "color": "#FE3678"
+        },
+        {
+            "text": "4_1_General-22",
+            "color": "#E799D8"
+        },
+        {
+            "text": "4_1_Inhalation-23",
+            "color": "#C627D4"
+        },
+        {
+            "text": "4_1_SkinContact-24",
+            "color": "#ADC648"
+        },
+        {
+            "text": "4_1_EyeContact-25",
+            "color": "#D98EAA"
+        },
+        {
+            "text": "4_1_Ingestion-26",
+            "color": "#F424CE"
+        },
+        {
+            "text": "4_1_RecommendedEquipment-624",
+            "color": "#3B558E"
+        },
+        {
+            "text": "4_2_GeneralSymptomsAndEffects-1420",
+            "color": "#31C5AA"
+        },
+        {
+            "text": "5_1_SuitableExtinguishingMedia-30",
+            "color": "#90FE2C"
+        },
+        {
+            "text": "5_1_ImproperExtinguishingMedia-31",
+            "color": "#3290BE"
+        },
+        {
+            "text": "5_2_FireAndExplosionHazards-33",
+            "color": "#3C062D"
+        },
+        {
+            "text": "5_2_HazardousCombustionProducts-633",
+            "color": "#750779"
+        },
+        {
+            "text": "6_1_GeneralMeasures-36",
+            "color": "#E772ED"
+        },
+        {
+            "text": "6_1_PersonalProtectionMeasures-37",
+            "color": "#D138AB"
+        },
+        {
+            "text": "6_2_EnvironmentalPrecautionaryMeasures-38",
+            "color": "#DC909F"
+        },
+        {
+            "text": "6_1_ForEmergencyResponders-638",
+            "color": "#8404E8"
+        },
+        {
+            "text": "6_3_Containment-914",
+            "color": "#BBC694"
+        },
+        {
+            "text": "6_3_CleanUp-915",
+            "color": "#27F96D"
+        },
+        {
+            "text": "6_4_OtherInstructions-40",
+            "color": "#F9D62A"
         }
     ],
-    "relations": [
-    ],
+    "relations": [],
     "users_file": "/users/allowed.txt"
 }

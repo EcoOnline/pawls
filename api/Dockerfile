@@ -34,7 +34,7 @@ ENV AWS_REGION=eu-west-1
 ENV AWS_IAM_ROLE=eco-ml-dev-ec2
 
 ## Replace with your s3 bucket name
-ENV S3_BUCKET_NAME=eco-ml-annotations
+ENV S3_BUCKET_NAME=eco-ml-sds-annotations
 ENV S3_ANNOTATION_DIRECTORY=session-1_01-20
 
 ## S3fs-fuse credential config
