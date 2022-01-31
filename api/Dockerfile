@@ -27,17 +27,15 @@ ENV LOCAL_MOUNT_DIRECTORY=/skiff_files/apps/pawls/annotations
 ## Create annotations folder
 WORKDIR ${LOCAL_MOUNT_DIRECTORY}
 
-## Set Your AWS Access credentials
-#ENV AWS_ACCESS_KEY=
-#ENV AWS_SECRET_ACCESS_KEY=
+# AWS Specific parameters for "data binding" to AWS storage (S3).
 ENV AWS_REGION=eu-west-1
 ENV AWS_IAM_ROLE=eco-ml-dev-ec2
-
-## Replace with your s3 bucket name
 ENV S3_BUCKET_NAME=eco-ml-sds-annotations
 ENV S3_ANNOTATION_DIRECTORY=session-1_01-20
 
-## S3fs-fuse credential config
+## S3fs-fuse credential config for AWS S3. This is used for local testing (if needed)
+#ENV AWS_ACCESS_KEY=
+#ENV AWS_SECRET_ACCESS_KEY=
 #RUN echo $AWS_ACCESS_KEY:$AWS_SECRET_ACCESS_KEY > /root/.passwd-s3fs && \
 #    chmod 600 /root/.passwd-s3fs
 
