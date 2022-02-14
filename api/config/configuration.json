@@ -3,123 +3,119 @@
     "labels": [
         {
             "text": "1_1_ProductName-2",
-            "color": "#6D2806"
+            "color": "#ADB4DA"
         },
         {
             "text": "1_1_Synonyms-6",
-            "color": "#7D045F"
-        },
-        {
-            "text": "1_1_Article-7",
-            "color": "#6DAD82"
+            "color": "#D2EE9B"
         },
         {
             "text": "1_1_REACHNo-563",
-            "color": "#E31424"
+            "color": "#E1B0D0"
         },
         {
             "text": "1_1_REACHComments-1653",
-            "color": "#7BCE55"
+            "color": "#E5B7AD"
         },
         {
             "text": "1_1_CAS-10",
-            "color": "#B1EDA5"
+            "color": "#EDBDB4"
+        },
+        {
+            "text": "1_1_Article-7",
+            "color": "#B0DAEA"
         },
         {
             "text": "1_2_UseOfSubstance-5",
-            "color": "#77B888"
+            "color": "#EEC3F5"
         },
         {
             "text": "1_2_UsesAdvisedAgainst-844",
-            "color": "#BD1F8F"
+            "color": "#A59BD3"
         },
         {
-            "text": "2_1_CLPClassificationComments-1413",
-            "color": "#8B1607"
+            "text": "2_1_CLPComments-1413",
+            "color": "#D098A7"
         },
         {
             "text": "2_2_HazardStatements-609",
-            "color": "#1C32F1"
+            "color": "#EAC694"
         },
         {
             "text": "2_2_PrecautionaryStatements-610",
-            "color": "#AEE470"
+            "color": "#DA97E7"
         },
         {
             "text": "2_2_SupplementalLabelInfo-1355",
-            "color": "#FE3678"
+            "color": "#E8A8B2"
         },
         {
             "text": "4_1_General-22",
-            "color": "#E799D8"
+            "color": "#F6A7F7"
         },
         {
             "text": "4_1_Inhalation-23",
-            "color": "#C627D4"
+            "color": "#87ADCE"
         },
         {
             "text": "4_1_SkinContact-24",
-            "color": "#ADC648"
+            "color": "#BCD09A"
         },
         {
             "text": "4_1_EyeContact-25",
-            "color": "#D98EAA"
+            "color": "#C7DAAA"
         },
         {
             "text": "4_1_Ingestion-26",
-            "color": "#F424CE"
+            "color": "#A2ADDE"
         },
         {
             "text": "4_1_RecommendedEquipment-624",
-            "color": "#3B558E"
+            "color": "#EBFBBB"
         },
         {
-            "text": "4_2_GeneralSymptomsAndEffects-1420",
-            "color": "#31C5AA"
+            "text": "5_1_SuitableExtMedia-30",
+            "color": "#9097D4"
         },
         {
-            "text": "5_1_SuitableExtinguishingMedia-30",
-            "color": "#90FE2C"
+            "text": "5_1_ImproperExtMedia-31",
+            "color": "#BEABDF"
         },
         {
-            "text": "5_1_ImproperExtinguishingMedia-31",
-            "color": "#3290BE"
+            "text": "5_2_FireExplosionHazards-33",
+            "color": "#E89CA0"
         },
         {
-            "text": "5_2_FireAndExplosionHazards-33",
-            "color": "#3C062D"
-        },
-        {
-            "text": "5_2_HazardousCombustionProducts-633",
-            "color": "#750779"
+            "text": "5_2_HazardousCombProducts-633",
+            "color": "#A399F3"
         },
         {
             "text": "6_1_GeneralMeasures-36",
-            "color": "#E772ED"
+            "color": "#CBDCAE"
         },
         {
-            "text": "6_1_PersonalProtectionMeasures-37",
-            "color": "#D138AB"
-        },
-        {
-            "text": "6_2_EnvironmentalPrecautionaryMeasures-38",
-            "color": "#DC909F"
+            "text": "6_1_ProtectionMeasures-37",
+            "color": "#D7FCBF"
         },
         {
             "text": "6_1_ForEmergencyResponders-638",
-            "color": "#8404E8"
+            "color": "#EDAEDD"
+        },
+        {
+            "text": "6_2_EnvironmentalMeasures-38",
+            "color": "#8CE3AC"
         },
         {
             "text": "6_3_Containment-914",
-            "color": "#BBC694"
+            "color": "#C6E8AE"
         },
         {
             "text": "6_3_CleanUp-915",
-            "color": "#27F96D"
+            "color": "#CCF9AA"
         },
         {
             "text": "6_4_OtherInstructions-40",
-            "color": "#F9D62A"
+            "color": "#C0FED9"
         }
     ],
     "relations": [],
