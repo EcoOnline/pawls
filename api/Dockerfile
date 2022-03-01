@@ -1,48 +1,22 @@
 FROM python:3.7.2
 
+# Setup a spot for the api code
+WORKDIR /usr/local/src/skiff/app/api
+
 ARG GITHUB_ACCESS_TOKEN
 
 # Install Python dependencies
 RUN pip install --upgrade pip setuptools wheel
 COPY requirements.txt .
+
 RUN pip install -r requirements.txt
+
 
 # Copy over the source code
 COPY app app/
 COPY config config/
 COPY main.py main.py
 
-RUN apt-get update -y && \
-    apt-get install -y build-essential libfuse-dev fuse
-RUN apt-get install lsb-release -y
-
-## Install S3 Fuse
-RUN rm -rf /usr/src/s3fs-fuse
-RUN git clone https://github.com/s3fs-fuse/s3fs-fuse/ /usr/src/s3fs-fuse
-WORKDIR /usr/src/s3fs-fuse 
-RUN ./autogen.sh && ./configure && make && make install
-
-## Set the directory where you want to mount your s3 bucket
-ENV LOCAL_MOUNT_DIRECTORY=/skiff_files/apps/pawls/annotations
-## Create annotations folder
-WORKDIR ${LOCAL_MOUNT_DIRECTORY}
-
-# AWS Specific parameters for "data binding" to AWS storage (S3).
-ENV AWS_REGION=eu-west-1
-ENV AWS_IAM_ROLE=eco-ml-dev-ec2
-ENV S3_BUCKET_NAME=eco-ml-sds-annotations
-ENV S3_ANNOTATION_DIRECTORY=session-1_01-20
-
-## S3fs-fuse credential config for AWS S3. This is used for local testing (if needed)
-#ENV AWS_ACCESS_KEY=
-#ENV AWS_SECRET_ACCESS_KEY=
-#RUN echo $AWS_ACCESS_KEY:$AWS_SECRET_ACCESS_KEY > /root/.passwd-s3fs && \
-#    chmod 600 /root/.passwd-s3fs
-
-# Setup a spot for the api code
-WORKDIR /usr/local/src/skiff/app/api
-
 # Kick things off
-ADD start.sh /start.sh
-RUN chmod 755 /start.sh 
-CMD ["/start.sh"]
+ENTRYPOINT [ "uvicorn" ]
+CMD ["main:app", "--host", "0.0.0.0"]

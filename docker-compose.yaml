@@ -9,13 +9,9 @@ services:
     api:
         build:
           context: ./api
-        devices:
-           - /dev/fuse:/dev/fuse:rwm
-        cap_add:
-            - SYS_ADMIN
         volumes:
             - ./api:/usr/local/src/skiff/app/api
-            #- ./skiff_files/apps/pawls/papers:/skiff_files/apps/pawls/annotations
+            - /home/ec2-user/eco-ml-sds-annotations-efs/<pipeline_run_id>:/skiff_files/apps/pawls/annotations
             - ./api/config/allowed_users_local_development.txt:/users/allowed.txt
         environment:
             # This ensures that errors are printed as they occur, which
